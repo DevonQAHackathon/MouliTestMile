@@ -13,21 +13,36 @@ Directory Structure
 
 
 <location>/config: Contains the configuration files.
+
 <location>/config/central.conf: Configuration file to update named properties.
+
 <location>/examples: Contains example data and UI files.
+
 <location>/bin/launch/arjuna.bat: Batch file to run tests using Arjuna via CLI on Windows
+
 <location>/bin/launch/arjuna.sh: Shell script to run tests using Arjuna via CLI on Mac/Unix/Linux systems
+
 <location>/bin/tools: Contains the binaries needed by Arjuna or user.
+
 <location>/bin/tools/uidrivers: Contains the binaries needed by Selenium or Selenium-like tools to drive browsers.
+
 <location>/bin/ext: Directory for third party libraries.
+
 <location>/bin/ext/java: Directory for Java based third party libraries.
+
 <location>/bin/lib/java: Contains Arjuna Pro Java libraries.
 
+
 <location>/data/sources/ Default data directory for externalising data for data source files
+
 <location>/data/references: Default data directory for data reference files.
+
 <location>/log: The default directory for Arjuna log.
+
 <location>/report: Default directory for reports. Contains the latest run report.
+
 <location>/ui_maps: Default directory for UI Map files that test author would use for doing UI test automation.
+
 
 
 Running tests :
