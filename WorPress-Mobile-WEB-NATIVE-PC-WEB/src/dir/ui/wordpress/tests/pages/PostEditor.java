@@ -27,11 +27,13 @@ public class PostEditor extends Wordpress{
 	}
 	
 	public void clickonConfirmPublish() throws Exception{
+		if(!isMobileNative())
 		element(E_PostEditor.BTN_CONFIRM_PUBLISH.toString()).click();
 		Steps.pass("Clicked on Confirm button of publish");
 	}
 	
 	public void selectHTMLLink() throws Exception{
+		if(!isMobileNative())
 		element(E_PostEditor.LNK_CHOOSE_HTML.toString()).click();
 		Steps.pass("Selected Html Link");
 	}

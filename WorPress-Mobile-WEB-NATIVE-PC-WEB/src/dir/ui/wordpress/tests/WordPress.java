@@ -1,5 +1,6 @@
 package dir.ui.wordpress.tests;
 
+import arjunasdk.config.RunConfig;
 import arjunasdk.ddauto.interfaces.DataRecord;
 import arjunasdk.uiauto.factories.UiDriverFactory;
 import arjunasdk.uiauto.interfaces.UiDriver;
@@ -23,15 +24,17 @@ public class WordPress {
 	private String password;
 	private String title;
 	private String content;
+	private String appPath;
 
-	@BeforeTest()
+	@BeforeTest
 	public void login(TestVariables tvar) throws Exception {
 		DataRecord record = tvar.record();
+		appPath = RunConfig.value("directory.project.root").asString().replace("mproject", "WordPress_org.wordpress.android.apk");
 		userName = record.string("USERNAME");
 		password = record.string("PASSWORD");
 		title = record.string("BLOG_TITLE");
 		content = record.string("BLOG_CONTENT");
-		driver = UiDriverFactory.getMobileWebUiDriver();
+		driver = UiDriverFactory.getMobileNativeUiDriver(appPath);
 		Login login = new Login(driver, url);
 		dashBoard = login.login(userName, password);
 	}
