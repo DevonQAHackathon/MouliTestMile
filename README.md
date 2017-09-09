@@ -105,3 +105,18 @@ EXAMPLES
 
     arjuna.bat -pn a.b -cn Test1 -dl ERROR
             Runs all tests in Test1 class and display ERROR & FATAL level log messages.
+	    
+	   
+Test Project Artifacts details: 
+
+dir.ui.wordpress.tests is the package contains tests.
+WordPress.java is the Test class.
+
+dir.ui.wordpress.tests.pages contains the individual page classes.
+
+dir.ui.wordpress.enums.pages contains the individual Element mapper file of each page.
+
+UI Element locator were externalized to file in the ../WorPress-Mobile-WEB-NATIVE-PC-WEB\autocognite-arjuna-0.3.6-b\autocognite-arjuna\uiauto_maps\wordpress location
+
+Externalized test data could be found the the below location. WorPress-Mobile-WEB-NATIVE-PC-WEB\autocognite-arjuna-0.3.6-b\autocognite-arjuna\data\sources
+
