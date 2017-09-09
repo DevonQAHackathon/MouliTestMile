@@ -34,7 +34,16 @@ public class WordPress {
 		password = record.string("PASSWORD");
 		title = record.string("BLOG_TITLE");
 		content = record.string("BLOG_CONTENT");
-		driver = UiDriverFactory.getMobileNativeUiDriver(appPath);
+		String context = RunConfig.userOptions().value("context").asString();
+        if(context.equalsIgnoreCase("ANDROIDNATIVE")){
+                driver = UiDriverFactory.getMobileNativeUiDriver(appPath);
+        }
+        else if(context.equalsIgnoreCase("ANDROIDWEB")){
+                driver = UiDriverFactory.getMobileWebUiDriver();
+        }
+        else{
+                driver = UiDriverFactory.getSelenium();
+        }
 		Login login = new Login(driver, url);
 		dashBoard = login.login(userName, password);
 	}
