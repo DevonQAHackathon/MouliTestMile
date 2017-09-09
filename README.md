@@ -126,4 +126,6 @@ UI Element locator were externalized to file in the ../WorPress-Mobile-WEB-NATIV
 
 Externalized test data could be found the the below location. WorPress-Mobile-WEB-NATIVE-PC-WEB\autocognite-arjuna-0.3.6-b\autocognite-arjuna\data\sources
 
+Mobile device configuration details were placed in /config/central.conf
+
 
